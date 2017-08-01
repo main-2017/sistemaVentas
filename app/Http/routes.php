@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.admin');
 });
 
-Route::resource('almacen/categoria','CategoriaController');
+Route::resource('almacen/categoria','CategoriaController'); //Definimos las rutas que llamaran a cada controlador
+Route::resource('almacen/articulo','ArticuloController');
+Route::resource('ventas/cliente', 'ClienteController');
+Route::resource('compras/proveedor', 'ProveedorController');

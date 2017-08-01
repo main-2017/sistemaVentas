@@ -2,11 +2,11 @@
 
 namespace sisVentas\Http\Controllers;
 
+use sisVentas\Categoria;
+
 use Illuminate\Http\Request;
 
 use sisVentas\Http\Requests;
-
-use sisVentas\app\Categoria;
 
 use Illuminate\Support\Facades\Redirect;
 

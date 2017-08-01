@@ -4,17 +4,20 @@ namespace sisVentas;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Categoria extends Model
+class Articulo extends Model
 {
-    protected $table ='categoria';
-    protected $primaryKey ='idcategoria';
+    protected $table ='articulo';
+    protected $primaryKey ='idarticulo';
     public $timestamps=false;
     protected $fillabel =[
+    	'idcategoria',
+    	'codigo',
     	'nombre',
+    	'stock',
     	'descripcion',
-    	'condicion'
+    	'imagen',
+    	'estado'
     ];
 
     protected $guared =[];
 }
-?>
