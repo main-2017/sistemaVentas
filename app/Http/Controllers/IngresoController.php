@@ -51,7 +51,7 @@ class IngresoController extends Controller
     	 	->select(DB::raw('CONCAT(art.codigo," ", art.nombre) AS articulo'), 'art.idarticulo') //concatena el código del articulo y su nombre para mostrarlo en un solo campo
     	 	->where('art.estado', '=', 'Activo')
     	 	->get();
-    	return viwe("compras.ingreso.create", ["personas"=>$personas, "articulos"=>$articulos]);
+    	return view("compras.ingreso.create", ["persona"=>$persona, "articulos"=>$articulos]);
     }
 
     public function store(IngresoFormRequest $request){
